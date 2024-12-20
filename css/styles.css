@@ -1,0 +1,110 @@
+body{
+  margin: 0;
+  /*font-family: Helvetica, sans-serif;*/
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica,sans-serif;
+  font-weight: 300;
+  color:#fff;
+}
+#map-canvas, #text-canvas, #fireworks-canvas{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+#fireworks-canvas,  #text-canvas{
+  pointer-events:none;
+}
+
+#card-text {
+  position: relative;
+  top: 30px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent glass effect */
+  border-radius: 15px; /* Smooth rounded edges */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  backdrop-filter: blur(8px); /* Blurred background */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Soft translucent border */
+  color: palevioletred;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+#card-text:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+#card-text span {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 5px #fff; /* Minimal glowing text effect */
+}
+
+#celebrate-btn{
+  padding:15px;
+  background-color:#3cbcc3;
+  color:white;
+  box-shadow: 0 0 12px #8B8B8B;
+  border: 1px solid #2c8b90;
+  text-decoration: none;
+  width:139px;
+  pointer-events:all !important;
+  border-radius: 3px;
+  margin:0 auto;
+}
+#celebrate-btn span{
+  text-shadow: 0 0 26px #476F6F;
+}
+#celebrate-btn:hover{
+  text-decoration:underline;
+  cursor:pointer;
+  cursor:hand;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(720deg);
+  }
+}
+
+.rotater:hover{
+    -webkit-animation-name:             rotate;
+    -webkit-animation-duration:         0.5s;
+    -webkit-animation-iteration-count:  1;
+    -webkit-animation-timing-function: bounce;
+}
+
+.marker{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  margin-top:0px;
+  margin-left:0px;
+  top: 0px;
+  opacity:1;
+  position:absolute;
+  z-index:99;
+  background-color:coral;
+  transition:  height 1.5s, width 1.5s, margin-top 1.5s, margin-left 1.5s, opacity 1.5s;
+  -moz-transition:  height 1.5s, width 1.5s, margin-top 1.5s, margin-left 1.5s, opacity 1.5s;
+  -webkit-transition: height 1.5s, width 1.5s, margin-top 1.5s, margin-left 1.5s, opacity 1.5s;
+  -o-transition:  height 1.5s, width 1.5s, margin-top 1.5s, margin-left 1.5s, opacity 1.5s;
+
+}
+.expand-marker{
+  height:175px;
+  width:175px;
+  margin-top:-87.5px;
+  margin-left:-87.5px;
+  opacity:0 !important;
+}
